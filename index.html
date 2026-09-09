@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Pixel — Cafetería Gamer, Ñuñoa</title>
+
+<!-- ============================================================
+     PROTOTIPO BETA — CAFÉ PIXEL
+     Datos verificados en vivo el 09-09-2026:
+     - Google Maps: dirección, rating 4.2/441 opiniones, badge "Amigable
+       con LGBTQ+", servicios (consumo en el lugar, retiro en la puerta,
+       entrega sin contacto), sin teléfono registrado por el negocio.
+       CID real: 0x9662cf14784fc67f:0xa425410cdb21c9a3
+       Coordenadas: -33.4497413, -70.5994720
+       Embed real obtenido vía Compartir → Incorporar un mapa.
+     - Horario oficial (bio de Instagram, coincide con portalpanorama.cl):
+       Lunes CERRADO, Martes a Viernes 14:15-21:30, Sábado y Domingo
+       11:30-21:30.
+     - Instagram real: @cafepixel.cl, ~57.6 mil seguidores, 341
+       publicaciones. TikTok real: @cafepixel.cl (~1.4K seguidores,
+       4447 likes). NO se encontró ningún WhatsApp ni teléfono confiable
+       para este local — varios números que aparecen en búsquedas
+       corresponden a otros negocios/países (formato venezolano, otra
+       dirección "Ruta 68 km 64"), así que NO se usaron. Único contacto:
+       Instagram y TikTok.
+     - Carta real: sacada de un PDF oficial del menú subido a Scribd
+       ("Menú Temático de Café Pixel", scribd.com/document/751321042)
+       más un precio cruzado con un artículo de prensa (FMDOS, sobre el
+       Woowafflet). Carta curada acá (selección representativa); el
+       sitio linkea al PDF completo real.
+     - Delivery apps (Rappi/Uber Eats/PedidosYa): NO se encontró ninguna
+       presencia confirmada — no se agregó ningún botón.
+     - Programa de fidelización: la IA de Google mencionó una "Ruta del
+       Café Ñuñoa" municipal con pasaporte digital, pero NO se encontró
+       ninguna fuente primaria que confirme que Café Pixel participa —
+       se descartó por no poder confirmarlo, para no inventar.
+     - Reseñas: 3 reseñas reales completas y positivas (Benjamin G,
+       Barbara rojas, Victoria Bravo), copiadas tal cual de Google Maps
+       ordenando por "Calificación más alta". Se revisó el conjunto
+       completo de reseñas (incluidas las negativas, sobre todo lentitud
+       de servicio y comida fría) buscando señales de "negocio que no es
+       lo que parece" — NINGUNA señal de alerta: 100% quejas de servicio/
+       comida típicas de un local familiar con niños, nunca nada
+       inapropiado.
+     - Fotos: 5 fotos REALES descargadas directo del feed público de
+       Instagram (@cafepixel.cl) el 09-09-2026 — logo real, sándwich con
+       el mural de Space Invaders, torta con el mural retro de fondo,
+       waffle con taza Pokébola sobre el mantel individual real del
+       local, tartas con la decoración de las paredes. Ninguna foto de
+       stock en este proyecto.
+     PENDIENTE / NUNCA INVENTADO:
+     - Sin WhatsApp/teléfono confirmado — solo Instagram/TikTok.
+     - Carta: son solo ítems representativos reales, la carta completa
+       tiene más — el sitio linkea al PDF real completo.
+     - Falta el resto de fotos del local (interior general, consolas) —
+       el usuario puede ir dejando más en fotos/.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loader"><img src="fotos/logo-raw.jpg" alt="" class="loader-mark"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" data-tab="inicio">
+      <img src="fotos/logo-raw.jpg" alt="Logo Café Pixel" class="brand-logo">
+      <span class="wordmark">Pixel</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><button class="nav-link active" data-tab="inicio">Inicio</button></li>
+      <li><button class="nav-link" data-tab="nosotros">Nosotros</button></li>
+      <li><button class="nav-link" data-tab="carta">Carta</button></li>
+      <li><button class="nav-link" data-tab="resenas">Reseñas</button></li>
+      <li><button class="nav-link" data-tab="visitanos">Visítanos</button></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn">Pedido <span class="cart-count" id="cartCount">0</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+<section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
+<section class="hero" id="top">
+  <div class="bg-photo">
+    <img src="fotos/sandwich-mural.jpg" alt="Sándwich con el mural pixel-art de Space Invaders de fondo en Café Pixel">
+  </div>
+  <span class="eyebrow reveal">CAFETERÍA GAMER · ÑUÑOA</span>
+  <h1 class="reveal">Insert Coin. <em>Level Up</em> tu once.</h1>
+  <p class="tagline reveal">Consolas para jugar, murales de Mario y Space Invaders, y una carta temática con Malteada Eevee, Panna Gengar y Koopa Shell — el café pensado para gamers de cualquier edad, en Simón Bolívar, Ñuñoa.</p>
+  <div class="hero-info reveal">
+    <div class="hero-pill"><span class="status-dot" id="statusDot"></span> <span id="statusText">Consultando horario…</span></div>
+    <div class="hero-pill">★ <strong>4.2</strong> (441 opiniones)</div>
+    <div class="hero-pill"><strong>LGBTQ+</strong> friendly</div>
+  </div>
+  <div class="cta-row reveal">
+    <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
+    <button class="btn btn-outline" data-tab="visitanos">Cómo llegar</button>
+  </div>
+</section>
+</section>
+
+<section id="tab-nosotros" class="tab-panel" data-tab-panel="nosotros">
+<section id="nosotros">
+  <div class="wrap sobre">
+    <span class="eyebrow reveal">quiénes somos</span>
+    <h2 class="reveal">Un café hecho por y para gamers</h2>
+    <p class="reveal">Café Pixel funciona en Simón Bolívar, Ñuñoa, con salas ambientadas de punta a punta: murales de Mario, Space Invaders y Minecraft, mesas con manteles individuales "Welcome Gamer" y consolas de verdad para jugar mientras esperas tu pedido. La carta sigue la misma idea — cafés, postres y malteadas con nombres sacados directo de Pokémon y Nintendo.</p>
+    <p class="reveal">Es un clásico entre las cafeterías temáticas de Santiago (la prensa lo destaca como uno de los cafés gamer más queridos de la ciudad) y su Instagram tiene casi 58 mil seguidores. Un detalle importante si vas a ir a jugar: varias reseñas reales cuentan que conviene reservar con anticipación, sobre todo los fines de semana, porque las consolas se llenan rápido con las celebraciones de cumpleaños.</p>
+    <div class="badges-row reveal">
+      <span class="badge badge-a">Amigable con LGBTQ+</span>
+      <span class="badge badge-a">Consolas para jugar</span>
+      <span class="badge badge-b">Ideal para cumpleaños</span>
+      <span class="badge badge-b">Instagram · 57.6K</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider reveal"><span class="mark">■ ▲ ●</span></div>
+
+<section style="background:var(--ink-2); color:#fff;">
+  <div class="wrap">
+    <div class="section-head dark reveal">
+      <span class="eyebrow">high score</span>
+      <h2>El local</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="reveal"><img src="fotos/torta-chocolate.jpg" alt="Torta de chocolate con el mural retro pixel-art de fondo"><div class="gallery-tag">Postres temáticos</div></figure>
+      <figure class="reveal"><img src="fotos/waffle-pokebola.jpg" alt="Waffle con taza Pokébola sobre el mantel individual real de Café Pixel"><div class="gallery-tag">Welcome Gamer</div></figure>
+      <figure class="reveal"><img src="fotos/postre-tartas.jpg" alt="Tartas de lima sobre una mesa con paredes de colores del local"><div class="gallery-tag">Ambientación a color</div></figure>
+      <figure class="reveal"><img src="fotos/sandwich-mural.jpg" alt="Sándwich con mural de Space Invaders detrás"><div class="gallery-tag">Salas ambientadas</div></figure>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-carta" class="tab-panel" data-tab-panel="carta">
+<section id="carta" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">la carta</span>
+      <h2>Nuestra carta</h2>
+    </div>
+    <p class="menu-note" style="text-align:center; margin-bottom:30px;">Selección real de la carta oficial (tiene más de 50 opciones en total) — <a href="https://es.scribd.com/document/751321042/CARTA-CAFE-PIXEL" target="_blank" rel="noopener" style="color:var(--neon-blue); font-weight:700;">ver el PDF completo de la carta acá</a>.</p>
+    <div class="menu-tabs" id="menuTabs"></div>
+    <div id="menuPanels"></div>
+  </div>
+</section>
+</section>
+
+<section id="tab-resenas" class="tab-panel" data-tab-panel="resenas">
+<section id="resenas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">lo que dicen</span>
+      <h2>441 opiniones en Google · 4.2 / 5</h2>
+    </div>
+    <div class="resenas-grid">
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Bueno, bonito y barato. Los fin de semana recomiendan no ir ya que se reserva para cumpleaños y hay muchos niños, pero en la semana es muy piola, gran ambiente, variedad de juegos y consolas, comida rica y temática."</p>
+        <footer>
+          <div class="resena-avatar">BG</div>
+          <div class="resena-meta"><strong>Benjamin G</strong>Local Guide · hace 10 meses</div>
+        </footer>
+      </article>
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Ambiente grato, te explican de forma muy amable como funciona todo. La comida que pedimos estaba muy rica y llegó bastante rápido."</p>
+        <footer>
+          <div class="resena-avatar">BR</div>
+          <div class="resena-meta"><strong>Barbara rojas</strong>hace 6 meses</div>
+        </footer>
+      </article>
+      <article class="resena-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Fuimos un lunes por la tarde y el lugar estaba vacío, así que nos atendieron de inmediato. La atención fue rápida, los pasteles estaban frescos y deliciosos. En cuanto a calidad y precio, me pareció excelente ☺️"</p>
+        <footer>
+          <div class="resena-avatar">VB</div>
+          <div class="resena-meta"><strong>Victoria Bravo</strong>Local Guide · hace un año</div>
+        </footer>
+      </article>
+    </div>
+    <div class="cta-row reveal" style="justify-content:center;">
+      <a class="btn btn-solid" href="https://search.google.com/local/writereview?placeid=0x9662cf14784fc67f:0xa425410cdb21c9a3" target="_blank" rel="noopener">★ Escribir una opinión en Google</a>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-visitanos" class="tab-panel" data-tab-panel="visitanos">
+<section class="visit" id="visitanos" style="background:linear-gradient(180deg, var(--ink), var(--ink-2)); color:#fff;">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="section-head dark reveal" style="text-align:left; margin-bottom:32px;">
+        <span class="eyebrow">te esperamos</span>
+        <h2>Visítanos</h2>
+      </div>
+      <div class="visit-block reveal"><h3>Dirección</h3><p>Av. Simón Bolívar 2919, Ñuñoa, Región Metropolitana</p></div>
+      <div class="visit-block reveal">
+        <h3>Horario</h3>
+        <p>Lunes cerrado · Martes a viernes 14:15–21:30 · Sábado y domingo 11:30–21:30</p>
+        <div class="visit-pill"><span class="status-dot" id="statusDot2"></span> <span id="statusText2">Consultando horario…</span></div>
+      </div>
+      <div class="visit-block reveal">
+        <h3>Servicio</h3>
+        <p>Consumo en el lugar, retiro en la puerta o entrega sin contacto. Si quieres jugar en las consolas, varias reseñas recomiendan reservar con anticipación, sobre todo los fines de semana.</p>
+      </div>
+      <div class="visit-block reveal">
+        <h3>Contacto</h3>
+        <div class="contact-links">
+          <a class="contact-pill" href="https://www.instagram.com/cafepixel.cl/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+          <a class="contact-pill" href="https://www.tiktok.com/@cafepixel.cl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.31 1.38V7.3s-1.88.09-3.25-1.48z"/></svg>
+            TikTok
+          </a>
+        </div>
+        <p class="menu-note" style="margin-top:10px;">No encontramos ningún WhatsApp ni teléfono confirmado para este local — Instagram y TikTok son sus canales de contacto reales.</p>
+      </div>
+      <div class="cta-row reveal" style="justify-content:flex-start;">
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Sim%C3%B3n+Bol%C3%ADvar+2919,+%C3%91u%C3%B1oa&destination_place_id=0x9662cf14784fc67f:0xa425410cdb21c9a3" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" href="https://waze.com/ul?q=Av.%20Sim%C3%B3n%20Bol%C3%ADvar%202919%2C%20%C3%91u%C3%B1oa&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+      </div>
+    </div>
+    <div class="map-frame">
+      <!-- Embed real generado desde la ficha de Google Maps del negocio (Compartir → Incorporar un mapa) -->
+      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9833121613115!2d-70.59947199999999!3d-33.4497413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf14784fc67f%3A0xa425410cdb21c9a3!2sCaf%C3%A9%20Pixel!5e0!3m2!1ses-419!2scl!4v1788917550974!5m2!1ses-419!2scl" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="fotos/logo-raw.jpg" alt="Logo Café Pixel" class="footer-logo">
+    <p class="footer-tag">Cafetería gamer · Ñuñoa</p>
+    <p class="footer-contact">Av. Simón Bolívar 2919, Ñuñoa · <a href="https://www.instagram.com/cafepixel.cl/" target="_blank" rel="noopener">@cafepixel.cl</a></p>
+    <div class="footer-badges">
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Consolas para jugar</span>
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Amigable LGBTQ+</span>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/cafepixel.cl/" target="_blank" rel="noopener">Instagram</a>
+      <span>·</span>
+      <a href="https://www.tiktok.com/@cafepixel.cl" target="_blank" rel="noopener">TikTok</a>
+      <span>·</span>
+      <span>Sitio demo diseñado con cariño</span>
+    </div>
+  </div>
+</footer>
+
+<!-- OVERLAY CARRITO -->
+<div class="overlay" id="cartOverlay">
+  <div class="cart-panel">
+    <button class="close-x" id="cartCloseBtn">&times;</button>
+    <h3>Tu pedido</h3>
+    <div id="cartLines"><p class="cart-empty">Todavía no agregaste nada.</p></div>
+    <div class="cart-total"><span>Total</span><span class="mono" id="cartTotal">$0</span></div>
+    <a class="btn btn-solid" style="justify-content:center; margin-top:14px;" id="checkoutBtn" href="https://www.instagram.com/cafepixel.cl/" target="_blank" rel="noopener">Consultar por Instagram</a>
+  </div>
+</div>
+
+<!-- OVERLAY MODAL PRODUCTO -->
+<div class="overlay modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="close-x" id="modalCloseBtn">&times;</button>
+    <div class="modal-photo" id="modalPhoto" style="display:none;"></div>
+    <h3 id="modalName"></h3>
+    <div class="price mono" id="modalPrice"></div>
+    <p class="desc" id="modalDesc"></p>
+    <button class="btn btn-solid" style="width:100%; justify-content:center;" id="modalAddBtn">Agregar al pedido</button>
+  </div>
+</div>
+
+<!-- WIDGET FLOTANTE -->
+<div class="float-widget">
+  <a class="float-btn instagram" href="https://www.instagram.com/cafepixel.cl/" target="_blank" rel="noopener" aria-label="Abrir Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+  <a class="float-btn tiktok" href="https://www.tiktok.com/@cafepixel.cl" target="_blank" rel="noopener" aria-label="Abrir TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.31 1.38V7.3s-1.88.09-3.25-1.48z"/></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
