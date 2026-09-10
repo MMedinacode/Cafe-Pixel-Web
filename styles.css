@@ -114,7 +114,7 @@
   .badge-b{border-color:rgba(239,68,68,0.5); color:var(--neon-red); background:rgba(239,68,68,0.08);}
 
   /* GALERIA */
-  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px;}
   .gallery-grid figure{position:relative; overflow:hidden; border-radius:10px; aspect-ratio:3/4; border:1px solid rgba(56,189,248,0.2);}
   .gallery-grid img{transition:transform .5s ease;}
   .gallery-grid figure:hover img{transform:scale(1.06);}
