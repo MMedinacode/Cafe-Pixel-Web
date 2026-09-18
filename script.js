@@ -9,34 +9,94 @@ const MENU = {
   cafesTematicos: {
     label: 'Cafés Temáticos',
     groups: [{ items: [
-      { n: 'Planta Caramel Pipe', d: 'Café temático inspirado en Mario', p: 4690 },
-      { n: 'Oreo Ball', p: 4790 },
-      { n: 'Cloud Dream Land', p: 4790 },
-      { n: 'Choco Ball', p: 4790 },
+      { n: 'Oreo Ball', d: 'Café en grano, leche texturizada con cacao, crema chantilly y galletas oreo.', p: 4790, img: 'fotos/waffle-pokebola.jpg' },
+      { n: 'Cloud Dream Land', d: 'Café en grano con leche texturizada, vainilla, crema chantilly y mostacillas.', p: 4790 },
+      { n: 'Choco Ball', d: 'Cacao con leche texturizada, crema chantilly y galletas oreo.', p: 4790 },
+      { n: 'Planta Caramel Pipe', d: 'Café en grano con leche texturizada y caramelo.', p: 4690 },
     ]}]
   },
-  postresTematicos: {
-    label: 'Postres Temáticos',
-    groups: [{ items: [
-      { n: 'Panna Gengar', d: 'Panna cotta temática Pokémon', p: 4290 },
-      { n: 'Koopa Shell', d: 'Inspirado en el caparazón de Bowser', p: 4290 },
-      { n: 'Woowafflet', d: 'Waffle de vainilla con plátano, frutillas, crema chantilly y salsa de chocolate', p: 5390 },
-    ]}]
-  },
-  bebidas: {
-    label: 'Bebidas Frías',
-    groups: [{ items: [
-      { n: 'Malteada Eevee', d: 'También disponible como Impactrueno (Pikachu)', p: 5390 },
-    ]}]
-  },
+
   cafeTradicional: {
     label: 'Café Tradicional',
     groups: [{ items: [
       { n: 'Espresso doble', p: 2100 },
-      { n: 'Americano', p: 2490 },
-      { n: 'Capuccino', p: 3190 },
-      { n: 'Mocca', p: 3390 },
+      { n: 'Macchiato', d: 'Espresso con espuma de leche.', p: 2300 },
+      { n: 'Americano', d: 'Espresso con agua caliente.', p: 2490 },
+      { n: 'Capuccino', d: 'Espresso con leche texturizada.', p: 2690 },
+      { n: 'Latte', d: 'Espresso con leche texturizada.', p: 3190 },
+      { n: 'Mocca', d: 'Espresso con leche y chocolate.', p: 3390 },
+      { n: 'Chocolate Caliente', d: 'Leche texturizada con cacao en polvo (250 ml).', p: 3390 },
+      { n: 'Affogato', d: 'Espresso y helado a elección.', p: 3590 },
+      { n: 'Té Twinings', d: 'English Breakfast, Earl Grey, Té Verde Menta, Indian Chai, Té negro frutos rojos, Lady Grey o Prince of Wales.', p: 1790 },
     ]}]
+  },
+
+  bebidas: {
+    label: 'Bebidas',
+    groups: [
+      { title: 'Malteadas temáticas', items: [
+        { n: 'Malteada Eevee', d: 'Malteada de chocolate con helado de chocolate, galletas oreo y leche. Decorada con crema chantilly y orejas de chocolate.', p: 5390 },
+        { n: 'Malteada Impactrueno', d: '¡Pikachuuu! Helado de vainilla, caramelo, limón y leche. Decorada con crema chantilly, ralladura de limón y fondant.', p: 5390 },
+      ]},
+      { title: 'Bebidas frías', items: [
+        { n: 'Café Helado', d: 'Café con leche fría, bolas de helado, crema chantilly, salsa de chocolate y barritas de chocolate.', p: 4790 },
+        { n: 'Limonada Menta Jengibre', d: 'Jugo exprimido de limón con menta fresca y jengibre.', p: 4290 },
+        { n: 'Jugo Natural pequeño', d: 'Frutilla, naranja o mango. 330 ml.', p: 3990 },
+        { n: 'Jugo Natural grande', d: 'Frutilla, naranja o mango. 450 ml.', p: 4290 },
+        { n: 'Bebidas', d: 'Coca-Cola, Fanta o Sprite, tradicional o zero.', p: 2190 },
+        { n: 'Agua Mineral', d: 'Con o sin gas.', p: 1890 },
+      ]}
+    ]
+  },
+
+  postres: {
+    label: 'Postres',
+    groups: [
+      { title: 'Postres temáticos', items: [
+        { n: 'Woowafflet', d: 'Waffle de vainilla con plátano y frutillas, crema chantilly y salsa de chocolate.', p: 5390, img: 'fotos/waffle-pokebola.jpg' },
+        { n: 'Choco Waffle DK', d: 'Waffle de chocolate con plátano, bola de helado y salsa de manjar.', p: 5390 },
+        { n: 'Panna Gengar', d: 'Panna cotta de arándanos, cubierta con salsa de arándanos y crema chantilly. Decorada con fondant.', p: 4290 },
+        { n: 'Koopa Shell', d: 'Pastel de chocolate blanco fundido, relleno con chocolate de leche, rodeado por merengue y con bola de helado.', p: 4290, img: 'fotos/torta-chocolate.jpg' },
+        { n: 'Poke-roll', d: 'Rollo de canela con salsa de chocolate blanco y avellanas, decorado con fondant.', p: 4290 },
+        { n: 'Ocarina of Pie', d: 'Pie de limón con merengue verde, jugo natural de limón y galletas temáticas.', p: 4190, img: 'fotos/postre-tartas.jpg' },
+        { n: 'Mousse Digglet', d: 'Mousse de chocolate belga, cubierto de salsa de manjar y fondo de galletas oreo con salsa de chocolate.', p: 3990 },
+      ]},
+      { title: 'Waffles tradicionales', items: [
+        { n: 'Waffle Frutilla', d: 'Waffle de vainilla con frutilla, crema chantilly y salsa de chocolate.', p: 4990 },
+        { n: 'Waffle Plátano', d: 'Waffle de vainilla con plátano, crema chantilly y salsa de chocolate.', p: 4990 },
+      ]}
+    ]
+  },
+
+  /* La carta impresa trae esto como una tabla: cinco variedades por tres
+     bases, con un precio en cada cruce. Acá va una fila por combinación
+     real, con su propio precio, para que se pueda pedir cualquiera de las
+     quince sin tener que leer una tabla. */
+  sandwich: {
+    label: 'Arma tu Sándwich',
+    groups: [
+      { title: 'Con Ave · pechuga de pollo deshuesada', items: [
+        { n: 'Ave Palta Mayo', d: 'Palta y mayo casera.', p: 5490, img: 'fotos/sandwich-mural.jpg' },
+        { n: 'Ave Luco', d: 'Queso derretido.', p: 5490 },
+        { n: 'Ave Italiano', d: 'Tomate, palta y mayo casera.', p: 5790 },
+        { n: 'Ave Palta Queso', d: 'Palta y queso derretido.', p: 5790 },
+        { n: 'Ave Chacarero', d: 'Tomate, porotos verdes y mayo casera.', p: 5790 },
+      ]},
+      { title: 'Con Mechada · vacuno reducido en su jugo', items: [
+        { n: 'Mechada Palta Mayo', d: 'Palta y mayo casera.', p: 6490 },
+        { n: 'Mechada Luco', d: 'Queso derretido.', p: 6490 },
+        { n: 'Mechada Italiano', d: 'Tomate, palta y mayo casera.', p: 6790 },
+        { n: 'Mechada Palta Queso', d: 'Palta y queso derretido.', p: 6790 },
+        { n: 'Mechada Chacarero', d: 'Tomate, porotos verdes y mayo casera.', p: 6790 },
+      ]},
+      { title: 'Con Champi · champiñones salteados en aceite de oliva', items: [
+        { n: 'Champi Palta Mayo', d: 'Palta y mayo casera.', p: 5290 },
+        { n: 'Champi Luco', d: 'Queso derretido.', p: 5290 },
+        { n: 'Champi Italiano', d: 'Tomate, palta y mayo casera.', p: 5590 },
+        { n: 'Champi Palta Queso', d: 'Palta y queso derretido.', p: 5590 },
+        { n: 'Champi Chacarero', d: 'Tomate, porotos verdes y mayo casera.', p: 5590 },
+      ]}
+    ]
   }
 };
 
